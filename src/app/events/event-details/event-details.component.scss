@@ -55,3 +55,17 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .event-card {
+        max-width: 350px;
+    }
+
+    .content{
+        padding: 0;
+    }
+    
+    .description{
+        font-size: 15px !important;
+    }
+}
