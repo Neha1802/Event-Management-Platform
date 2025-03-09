@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "e58d",
+      "username": "neha1802",
+      "password": "neha1234",
+      "email": "nehap1802@gmail.com"
+    },
+    {
+      "id": "20ca",
+      "username": "neha123",
+      "password": "neha123",
+      "email": "neha123@gmail.com"
+    },
+    {
+      "id": "3cd4",
+      "username": "john",
+      "password": "john123",
+      "email": "john@gmail.com"
+    }
+  ],
+  "events": [
+    {
+      "id": "2",
+      "title": "Tech Conference",
+      "date": "2025-04-20",
+      "location": "New York",
+      "description": "Annual tech event featuring industry leaders."
+    },
+    {
+      "id": "3080",
+      "title": "Angular Workshop",
+      "description": "Learn, upgrade, enhance your skills here.",
+      "date": "2025-03-12",
+      "location": "Online"
+    }
+  ]
+}

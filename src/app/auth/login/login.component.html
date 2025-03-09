@@ -1,0 +1,45 @@
+<div class="main-content">
+
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="auth-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          formControlName="username"
+          class="form-control"
+          [class.is-invalid]="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+        <div class="invalid-feedback" *ngIf="loginForm.get('username')?.errors?.['required'] && loginForm.get('username')?.touched">
+          Username is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          class="form-control"
+          [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <div class="invalid-feedback" *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched">
+          Password is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid || isLoading">
+        {{ isLoading ? 'Logging in...' : 'Login' }}
+      </button>
+      <p class="auth-link">
+        Don't have an account? <a [routerLink]="'/register'">Register here</a>
+      </p>
+      
+    </form>
+  </div>
+  <div class="event-content">
+    <mat-icon style=" color: #ff5722;">event</mat-icon>
+    <h1>Event Management Platform</h1>
+    <p>Create, manage and share your events with ease. <br> Join our platform to start organizing memorable experiences today.</p>
+  </div>
+  
+</div>

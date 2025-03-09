@@ -1,0 +1,29 @@
+.form-page {
+    background-color: #97d6af70;
+    height: 100vh;
+    display: flex;
+}
+
+.edit-header {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.event-form-card {
+    max-width: 500px;
+    height: 75%;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,38 @@
+<div class="form-page">
+  <mat-card class="event-form-card">
+    <mat-card-title class="edit-header">{{ isEditMode ? 'Edit Event' : 'Create Event' }}</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" type="text" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="date" required />
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Location</mat-label>
+          <input matInput formControlName="location" type="text" required />
+        </mat-form-field>
+
+        <div class="button-group">
+          <button mat-flat-button color="primary" type="submit" [disabled]="eventForm.invalid || isLoading">
+            {{ isEditMode ? 'Update Event' : 'Create Event' }}
+          </button>
+          <button mat-raised-button color="warn" type="button" routerLink="/events/event-list" >Cancel</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

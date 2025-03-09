@@ -1,0 +1,102 @@
+.event-list-page{
+    background: #d7e3ff59;
+    height: 100vh;
+}
+
+.event-list-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+.event-card {
+    position: relative;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 400px;
+
+    h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    p {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .event-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .event-actions {
+        display: flex;
+        gap: 10px;
+
+        button {
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: bold;
+
+            &.edit {
+                background: #ff9800;
+                color: white;
+
+                &:hover {
+                    background: #e68900;
+                }
+            }
+
+            &.delete {
+                background: #f44336;
+                color: white;
+
+                &:hover {
+                    background: #d32f2f;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-list-container {
+        padding: 10px;
+    }
+
+    .event-card {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    background: #6c757d3d;
+}
+
+.logo {
+    width: 100px;
+}
+
+.spacer {
+    flex-grow: 1;
+}
